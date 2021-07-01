@@ -22,12 +22,12 @@
     <form action="data" method="POST" style="padding: 63px;">
         @csrf
         <div class="form-group">
-          <label for="email">Start Date:</label>
+          <label for="start_date">Start Date:</label>
           <input style=" width: 180px; " type="date" name="start_date" id="start_date" class="form-control dates" placeholder="Select Date" value=""/>
         
         </div>
         <div class="form-group">
-          <label for="pwd">End Date:</label>
+          <label for="end_date">End Date:</label>
           <input style=" width: 180px; " type="date" name="end_date" id="end_date" class="form-control dates" value=""/>
         </div>
 
