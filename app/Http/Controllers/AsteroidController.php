@@ -89,7 +89,6 @@ class AsteroidController extends Controller
         foreach ($givenDates as $key => $value) {
             $asteriodsCount[$value] = count($getData_byDate[$value]);
         }
-        $givenDates = array_keys($asteriodsCount);
         $finalAsteriodCount = array_values($asteriodsCount);
         
         return view('viewdata', compact('fastestAsteroidId','fastestAsteroidName', 'fastestAsteroidSpeed','fastestAsteroidSize', 'closestAsteroidId','closestAsteroidName', 'closestAsteroidDistance','closestAsteroidSize', 'givenDates', 'finalAsteriodCount'));
