@@ -67,10 +67,9 @@ class AsteroidController extends Controller
         $fastestAsteroidName = $all_asteriodArray[$fastestAsteroidIndexValue]['name'];
         $getdiameter = $all_asteriodArray[$fastestAsteroidIndexValue]['estimated_diameter']['kilometers'];
         foreach($getdiameter as $key => $value) {
-            $actualsize = ($value + $actualsize)/2;
+            $actualsize = ($value + $actualsize);
         }
-        $fastestAsteroidSize = $actualsize;
-        
+        $fastestAsteroidSize = $actualsize/2;
 
         //sorting in decending order by values so that closest one comes first
         asort($distanceArray);
@@ -80,9 +79,9 @@ class AsteroidController extends Controller
         $closestAsteroidName = $all_asteriodArray[$closestAsteroidIndexValue]['name'];
         $getdiameterClosest = $all_asteriodArray[$closestAsteroidIndexValue]['estimated_diameter']['kilometers'];
         foreach($getdiameterClosest as $key => $value) {
-            $actualsizeclosest = ($value + $actualsizeclosest)/2;
+            $actualsizeclosest = ($value + $actualsizeclosest);
         }
-        $closestAsteroidSize = $actualsizeclosest;
+        $closestAsteroidSize = $actualsizeclosest/2;
         
         //get the count of asteriods for each day
         $givenDates = array_keys($getData_byDate);
